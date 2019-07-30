@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fd_iterm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>fd_iterm</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="fd_iterm-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="fd_iterm:war exploded" />
+    </root>
+  </artifact>
+</component>

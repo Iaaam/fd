@@ -1,3 +1,5 @@
+debug: true
+
 # service
 server:
   servlet:
@@ -21,8 +23,16 @@ spring:
         min-idle: 0
     # 连接超时时间（毫秒）
     timeout: 1000
-  # mybatis
 
+    devtools:
+      restart:
+        #设置开启热部署
+        enabled: true
+      freemarker:
+        #页面不加载缓存，修改即时生效
+        cache: false
+
+  # mybatis
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://rm-2ze1tb28p0w98f7dumo.mysql.rds.aliyuncs.com:3306/fd_iterm
@@ -64,4 +74,3 @@ spring.druid.connectionProperties:
 mybatis:
   mapper-locations: classpath:com/fd/fd_iterm/dao/*Mapper.xml
   type-aliases-package: com.fd.fd_iterm.domain
-

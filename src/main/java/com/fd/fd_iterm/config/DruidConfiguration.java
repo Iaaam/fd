@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 
 /**
- * 配置类，主要配置Datasource
- * @author 隋亮亮
+ * @Desctiption: 配置类，主要配置Datasource
+ * @author: 隋亮亮
  */
 @Configuration
 public class DruidConfiguration {

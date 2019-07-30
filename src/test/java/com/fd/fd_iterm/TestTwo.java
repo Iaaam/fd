@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -14,13 +15,15 @@ public class TestTwo {
     @Autowired
     RedisUtil redisUtil;
 
-    @Test
-    public void TestDemo(){
-        System.out.println("中文数据");
-        redisUtil.set("demo3", "你好啊");
-        System.out.println("-----------------------");
 
-        String demo1 = redisUtil.get("demo3");
-        System.out.println(demo1);
+    @Cacheable(value="demo4", key = "id")
+    public String TestDemo(){
+        return "helloworld";
+    }
+
+    @Test
+    public void getTest(){
+        String s = TestDemo();
+        System.out.println(s);
     }
 }
