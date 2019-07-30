@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fd.fd_iterm.mapper.ITitleMapper">
+    <resultMap id="f_title" type="com.fd.fd_iterm.domain.FirstTitle">
+        <id column="f_id" property="id"></id>
+        <result column="f_cname" property="fName"></result>
+        <collection property="list" ofType="com.fd.fd_iterm.domain.SecondTitle">
+            <id column="s_id" property="id"></id>
+            <result column="s_name" property="sName"></result>
+        </collection>
+    </resultMap>
+
+    <select id="findAllTitle" resultMap="f_title">
+        select * from f_title f, s_title s where f.f_id = s.f_id
+    </select>
+
+</mapper>

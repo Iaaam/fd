@@ -1,5 +1,3 @@
-debug: true
-
 # service
 server:
   servlet:
@@ -23,14 +21,6 @@ spring:
         min-idle: 0
     # 连接超时时间（毫秒）
     timeout: 1000
-
-    devtools:
-      restart:
-        #设置开启热部署
-        enabled: true
-      freemarker:
-        #页面不加载缓存，修改即时生效
-        cache: false
 
   # mybatis
   datasource:
@@ -72,5 +62,5 @@ spring.druid.connectionProperties:
 
 # mybatis
 mybatis:
-  mapper-locations: classpath:com/fd/fd_iterm/dao/*Mapper.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.fd.fd_iterm.domain
