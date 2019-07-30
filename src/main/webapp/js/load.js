@@ -40,7 +40,7 @@ function loadTitle() {
                 // 待拼接的字符串
                 var str = "<li class=\"treeview\">\n" +
                     "<a href=\"#\">\n" +
-                    "<i class=\"fa fa-folder\"></i> <span>"+data[i].fName+"</span>\n" +
+                    "<i class="+ "\""+data[i].iconAddr+ "\"" +"></i> <span>"+data[i].fName+"</span>\n" +
                     "<span class=\"pull-right-container\">\n" +
                     "<i class=\"fa fa-angle-left pull-right\"></i>\n" +
                     "</span>\n" +

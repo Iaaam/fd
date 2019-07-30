@@ -19,6 +19,11 @@ public class FirstTitle {
     private String fName;
 
     /**
+     * 一级标题图标
+     */
+    private String iconAddr;
+
+    /**
      * 一级标题下的二级标题
      */
     private List<SecondTitle> list;
@@ -45,5 +50,13 @@ public class FirstTitle {
 
     public void setList(List<SecondTitle> list) {
         this.list = list;
+    }
+
+    public String getIconAddr() {
+        return iconAddr;
+    }
+
+    public void setIconAddr(String iconAddr) {
+        this.iconAddr = iconAddr;
     }
 }

@@ -36,7 +36,13 @@ public class TitleServiceImpl implements ITitleService {
 
         if(isExists == true){
             // 如果在redis中存在
-            return redis.get("all_title");
+            String all_title = redis.get("all_title");
+            //去掉开头和结尾的双引号
+            all_title=all_title.substring(1, all_title.length()-1);
+            //去掉转义字符
+            all_title=all_title.replace("\\", "");
+            System.out.println(all_title);
+            return all_title;
         }else{
             // 如果在redis中不存在，先从数据库中查
             List<FirstTitle> titles = mapper.findAllTitle();
@@ -50,6 +56,7 @@ public class TitleServiceImpl implements ITitleService {
             }
             // 存入redis中
             redis.set("all_title", json);
+            System.out.println(json);
             return json;
 
         }

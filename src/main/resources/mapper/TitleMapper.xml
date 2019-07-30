@@ -4,6 +4,7 @@
     <resultMap id="f_title" type="com.fd.fd_iterm.domain.FirstTitle">
         <id column="f_id" property="id"></id>
         <result column="f_cname" property="fName"></result>
+        <result column="f_icon_addr" property="iconAddr"></result>
         <collection property="list" ofType="com.fd.fd_iterm.domain.SecondTitle">
             <id column="s_id" property="id"></id>
             <result column="s_name" property="sName"></result>
