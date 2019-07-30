@@ -8,6 +8,8 @@
         <collection property="list" ofType="com.fd.fd_iterm.domain.SecondTitle">
             <id column="s_id" property="id"></id>
             <result column="s_name" property="sName"></result>
+            <result column="s_page" property="sPage"></result>
+            <result column="li_id" property="lId"></result>
         </collection>
     </resultMap>
 

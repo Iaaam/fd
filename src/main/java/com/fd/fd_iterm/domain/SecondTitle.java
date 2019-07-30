@@ -15,6 +15,32 @@ public class SecondTitle {
      */
     private String sName;
 
+    /**
+     * 对应的界面
+     */
+    private String sPage;
+
+    /**
+     * 显示界面的id
+     */
+    private String lId;
+
+    public String getsPage() {
+        return sPage;
+    }
+
+    public void setsPage(String sPage) {
+        this.sPage = sPage;
+    }
+
+    public String getlId() {
+        return lId;
+    }
+
+    public void setlId(String lId) {
+        this.lId = lId;
+    }
+
     public Integer getId() {
         return id;
     }

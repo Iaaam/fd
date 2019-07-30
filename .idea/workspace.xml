@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc89eeb0-1e5e-4552-9294-7f775c6b2b61" name="Default Changelist" comment="项目搭建完毕">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/archives-chief-officer-page.html" afterDir="false" />
+    <list default="true" id="dc89eeb0-1e5e-4552-9294-7f775c6b2b61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/archives-supplier-manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/load.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/archives-administrator-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/archives-administrator-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/archives-chief-officer-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/archives-chief-officer-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-chief-officer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-chief-officer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-officer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-officer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backgoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backgoods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backstore.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backstore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-detial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-detial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-detial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-detial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-detial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-detial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-dispatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-dispatch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-detial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-detial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-processing.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-processing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-purchase.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-purchase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/slideBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/slideBar.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,31 +53,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
-              <folding>
-                <element signature="e#3440#3460#0" expanded="true" />
-                <element signature="e#3491#3543#0" expanded="true" />
-                <element signature="e#3597#3623#0" expanded="true" />
-                <element signature="e#3918#3939#0" expanded="true" />
-                <element signature="e#4103#4154#0" expanded="true" />
-                <element signature="e#4207#4233#0" expanded="true" />
-                <element signature="e#4528#4549#0" expanded="true" />
-                <element signature="e#4713#4747#0" expanded="true" />
-                <element signature="e#4799#4825#0" expanded="true" />
-                <element signature="e#5120#5141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/service/impl/TitleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="50" selection-start-line="39" selection-start-column="12" selection-end-line="42" selection-end-column="50" />
+            <state relative-caret-position="243">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,16 +65,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/head.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/controller/GetTitle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3390">
-              <caret line="226" column="41" selection-start-line="226" selection-start-column="41" selection-end-line="226" selection-end-column="41" />
+            <state relative-caret-position="349">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-chief-officer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="311" column="66" selection-start-line="311" selection-start-column="34" selection-end-line="311" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-officer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="310" column="64" selection-start-line="310" selection-start-column="30" selection-end-line="310" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -75,17 +97,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/load.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="240">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-chief-officer-page.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/FirstTitle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+            <state relative-caret-position="90">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding>
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding>
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -107,9 +170,11 @@
       <find>Sname</find>
       <find>img</find>
       <find>../</find>
+      <find>num == 3</find>
     </findStrings>
     <replaceStrings>
       <replace>sName</replace>
+      <replace>num == 4</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -128,24 +193,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/com/fd/fd_iterm/dao/backGoodsDetailMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/auto_generator_tool/generator.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/fd/fd_iterm/dao/backReceiptsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/dao/backReceiptsMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/fd/fd_iterm/dao/backGoodsGetailMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/banner.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/generator.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/utils/AutoGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/utils/RedisUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/config/RedisConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/asd" />
         <option value="$PROJECT_DIR$/src/test/java/com/fd/fd_iterm/TestTwo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/wabapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/config/DruidConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/dao/TitleDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/fd/fd_iterm/dao/TitleMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/fd/fd_iterm/FirstTest.java" />
@@ -160,15 +212,38 @@
         <option value="$PROJECT_DIR$/src/main/webapp/pages/all-admin-index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/archives-chief-officer-page.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/head.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/service/ITitleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/controller/GetTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/slideBar.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-detial.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/FirstTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/load.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/service/impl/TitleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/head.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/slideBar.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/archives-administrator-details.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/archives-chief-officer-page.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-chief-officer.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-officer.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backgoods.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backstore.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-detial.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-history.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-new.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-detial.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-history.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-new.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-dispatch.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-detial.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-purchase.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-processing.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-detial.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-history.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/archives-supplier-manage.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/load.js" />
       </list>
     </option>
   </component>
@@ -213,10 +288,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1821" />
-    <option name="y" value="47" />
-    <option name="width" value="1456" />
-    <option name="height" value="936" />
+    <option name="x" value="270" />
+    <option name="y" value="172" />
+    <option name="width" value="1620" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -289,6 +364,28 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="fd" type="462c0819:PsiDirectoryNode" />
               <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fd_iterm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fd" type="462c0819:PsiDirectoryNode" />
+              <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fd_iterm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fd" type="462c0819:PsiDirectoryNode" />
+              <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -308,7 +405,15 @@
               <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fd_iterm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fd_iterm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fd_iterm" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +421,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fd_iterm" type="b2602c69:ProjectViewProjectNode" />
@@ -347,15 +451,16 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\fd_iterm\src\main\webapp\pages" />
-      <recent name="D:\fd_iterm\src\main\webapp\plugins" />
-      <recent name="D:\fd_iterm\src\main\webapp" />
-      <recent name="D:\fd_iterm\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\fd_iterm\src\main\webapp" />
       <recent name="D:\fd_iterm\src\main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\fd_iterm\src\main\webapp\pages" />
+      <recent name="D:\fd_iterm\src\main\webapp\js" />
+      <recent name="D:\fd_iterm\src\main\webapp\plugins" />
+      <recent name="D:\fd_iterm\src\main\webapp" />
+      <recent name="D:\fd_iterm\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -488,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564421424317</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加仓库类别管理">
+      <created>1564500498472</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564500498473</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -524,7 +636,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42137000" />
+    <option name="totallyTimeSpent" value="46666000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,10 +648,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
+    <frame x="-7" y="-7" width="1455" height="935" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.2956335" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.2555476" />
       <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.19402985" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -549,15 +661,15 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4110629" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.36550975" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41095892" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.3648817" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286334" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.36550975" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -590,9 +702,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="项目搭建完毕" />
     <MESSAGE value="项目搭建优化，加入热部署" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目搭建优化，加入热部署" />
+    <MESSAGE value="添加仓库类别管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加仓库类别管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -607,72 +721,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/dao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/fd/fd_iterm/dao/backGoodsDetailMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/dao/backGoodsDetailMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/backGoodsDetail.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-568">
-          <caret line="159" column="24" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/auto_generator_tool/generator.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/dao/backGoodsGetailMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/backGoodsGetail.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/dao/backReceiptsMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/fd/fd_iterm/dao/backGoodsGetailMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/utils/AutoGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/asd" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/fd/fd_iterm/FdItermApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://MAVEN/com.fd:fd_iterm:0.0.1-SNAPSHOT">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -815,16 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/all-admin-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1149">
-          <caret line="220" column="99" selection-start-line="220" selection-start-column="99" selection-end-line="220" selection-end-column="99" />
-          <folding>
-            <element signature="e#3999#4022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/utils/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -842,20 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backgoods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-detial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4650">
-          <caret line="310" column="55" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/plugins/adminLTE/js/pages/dashboard.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -866,34 +890,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/controller/GetTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -917,30 +917,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/slideBar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="38" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/FirstTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
+        <state relative-caret-position="-1965">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
           <folding>
             <element signature="e#3440#3460#0" expanded="true" />
             <element signature="e#3491#3543#0" expanded="true" />
@@ -956,20 +936,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/service/impl/TitleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="50" selection-start-line="39" selection-start-column="12" selection-end-line="42" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/inventory-business-back-storehouse.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="226" column="41" selection-start-line="226" selection-start-column="41" selection-end-line="226" selection-end-column="41" />
+        <state relative-caret-position="1245">
+          <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
@@ -979,17 +952,263 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/load.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/slideBar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        <state relative-caret-position="375">
+          <caret line="37" column="68" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backstore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="690" column="72" lean-forward="true" selection-start-line="690" selection-start-column="38" selection-end-line="690" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="350" column="59" selection-start-line="350" selection-start-column="34" selection-end-line="350" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-detial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="325" column="23" lean-forward="true" selection-start-line="325" selection-start-column="23" selection-end-line="325" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="1063" column="64" lean-forward="true" selection-start-line="1063" selection-start-column="64" selection-end-line="1063" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-borrow-new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="318" column="55" lean-forward="true" selection-start-line="318" selection-start-column="55" selection-end-line="318" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="334" column="57" lean-forward="true" selection-start-line="334" selection-start-column="34" selection-end-line="334" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-detial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="347" column="24" selection-start-line="347" selection-start-column="24" selection-end-line="347" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="1098" column="24" selection-start-line="1098" selection-start-column="24" selection-end-line="1098" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-loan-new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="355" column="24" selection-start-line="355" selection-start-column="24" selection-end-line="355" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="602" column="65" lean-forward="true" selection-start-line="602" selection-start-column="65" selection-end-line="602" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-dispatch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="308" column="24" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="302" column="24" selection-start-line="302" selection-start-column="24" selection-end-line="302" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-detial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="242" column="70" lean-forward="true" selection-start-line="242" selection-start-column="70" selection-end-line="242" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="272" column="87" lean-forward="true" selection-start-line="272" selection-start-column="87" selection-end-line="272" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout-indent-detial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="273" column="24" selection-start-line="273" selection-start-column="24" selection-end-line="273" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-purchase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="262" column="77" selection-start-line="262" selection-start-column="77" selection-end-line="262" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-stockout0-indent-processing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="685" column="71" selection-start-line="685" selection-start-column="71" selection-end-line="685" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/inventory-business-backgoods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="419" selection-start-line="419" selection-end-line="419" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/all-admin-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="210" column="33" selection-start-line="210" selection-start-column="33" selection-end-line="210" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-supplier-manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="432" column="66" selection-start-line="432" selection-start-column="42" selection-end-line="432" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-chief-officer-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state relative-caret-position="252">
+          <caret line="184" column="11" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-administrator-details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="469" column="14" selection-start-line="469" selection-start-column="14" selection-end-line="469" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-officer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="310" column="64" selection-start-line="310" selection-start-column="30" selection-end-line="310" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/FirstTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/domain/SecondTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TitleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="517" column="27" selection-start-line="517" selection-start-column="27" selection-end-line="517" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/controller/GetTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fd/fd_iterm/service/impl/TitleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/archives-warehouse-details-chief-officer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="311" column="66" selection-start-line="311" selection-start-column="34" selection-end-line="311" selection-end-column="66" />
         </state>
       </provider>
     </entry>

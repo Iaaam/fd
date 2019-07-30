@@ -1,7 +1,7 @@
 $(function () {
     // 请求头部页面
     $.ajax({
-        url: "pages/head.html",
+        url: "../pages/head.html",
         success: function (data) {
             $("#header").html(data);
         }
@@ -9,7 +9,7 @@ $(function () {
 
     // 请求底部页面
     $.ajax({
-        url: "pages/footer.html",
+        url: "../pages/footer.html",
         success: function (data) {
             $("#footer").html(data);
         }
@@ -17,7 +17,7 @@ $(function () {
 
     // 请求侧边导航栏
     $.ajax({
-        url: "pages/slideBar.html",
+        url: "../pages/slideBar.html",
         success: function (data) {
             $("#slideBar").html(data);
             loadTitle();
@@ -32,7 +32,7 @@ $(function () {
  */
 function loadTitle() {
     $.ajax({
-        url: "get/gettitle",
+        url: "../get/gettitle",
         success: function (data) {
             // 结果字符串
             var result = "";
@@ -49,8 +49,8 @@ function loadTitle() {
                 result += str;
                 // 拼接二级标题
                 for(var j = 0; j < data[i].list.length; j++){
-                    str = "<li id=\"archives-warehouse-details-officer\" >\n" +
-                        "<a href=\"archives-warehouse-details-officer.html\">\n" +
+                    str = "<li id="+"\"" + data[i].list[j].lId +"\""+" >\n" +
+                        "<a href="+"\"" + data[i].list[j].sPage +"\""+">\n" +
                         "<i class=\"fa fa-circle-o\"></i> "+ data[i].list[j].sName +"\n" +
                         "</a>\n" +
                         "</li>";
