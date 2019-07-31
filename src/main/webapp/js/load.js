@@ -65,6 +65,7 @@ function loadTitle() {
                 result += "</ul>\n" +
                     "</li>";
             }
+            // TODO: 标题栏在以下注册点击事件
             // 加入到html中
             $("#titleWin").html(result);
 
@@ -72,74 +73,42 @@ function loadTitle() {
             $("#admin-index").click(mainResult);
 
             // 仓库类别点击事件
-            $("#archives-warehouse-details-officer").click(warehouseResult);
+            $("#archives-warehouse-details-chief-officer").click(warehouseResult);
         },
         dataType: "json"
     })
 }
 
 /**
- * ajax请求仓库零件
- */
-function loadStoreHouse() {
-    $.get({
-        url: "storeHouse/findAllComp",
-        success: function (data) {
-            var result = "";
-            for (var i = 0; i < data.length; i++){
-                result += "<tr>\n" +
-                    "<td><input name=\"ids\" type=\"checkbox\"></td>\n" +
-                    "<td>"+(i+1)+"</td>\n" +
-                    "<td>"+data[i].component.name+"</td>\n" +
-                    "<td>"+ data[i].component.type +"</td>\n" +
-                    "<td>" +data[i].num+ "</td>\n" +
-                    "<td>"+ data[i].component.unit +"</td>\n" +
-                    "<td>"+data[i].mark+"</td>\n" +
-                    "</tr>"
-            }
-
-            $("#storeHouseMess").html(result);
-        }
-    })
-}
-
-
-/**
- * 首页点击事件处理函数
+ * @description: 首页点击事件处理函数
+ * @author: 隋亮亮
+ * @date: 2019-07-31
  * @returns {boolean}
  */
 function mainResult() {
-     $.ajax({
-         url: "pages/main.html",
-         success: function (data) {
-             $("#contain").html(data);
-         }
-     });
+    // 加载主界面
+    $.ajax({
+        url: "pages/main.html",
+        success: function (data) {
+            $("#contain").html(data);
+        }
+    });
     markActive("admin-index");
     return false;
 }
 
-function warehouseResult() {
-    markActive("archives-warehouse-details-officer");
-    $.ajax({
-        url: "pages/archives-warehouse-details-officer.html",
-        success: function (data) {
-            $("#contain").html(data);
-            loadStoreHouse()
-        }
-    });
-    return false;
-}
-
-
 /**
- * 清除所有激活状态
+ * @description: 清除所有激活状态
+ * @author: 隋亮亮
+ * @data: 2019-07-31
  * @param id
  */
 function markActive(id){
+    // 清楚所有active
     $("#admin-index").removeClass("active");
     $(".treeview").removeClass("active");
     $(".treeview-menu>li").removeClass("active");
+    // 给指定id增加active
     $("#"+id).addClass("active");
 }
 

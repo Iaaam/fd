@@ -14,5 +14,10 @@ import java.util.List;
 @Mapper
 public interface IStoreHouse {
 
+    /**
+     * 查询管理员仓库内的零件
+     * @param fdMess
+     * @return
+     */
     public List<StoreHouse> findAllComp(FdMess fdMess);
 }
