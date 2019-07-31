@@ -58,6 +58,33 @@ function loadStoreHouse() {
                 }
 
             }
+
+            // 请求隐藏域内的表单
+            $.ajax({
+                url: "storeHouse/findAllComp",
+                data: {
+                    startPage: 1,
+                    pageSize: data.total
+                },
+                success: function (data_cp) {
+                    var str = "";
+                    for (var i = 0; i < data_cp.list.length; i++){
+                        str += "<tr>\n" +
+                            "<td>"+(i+1)+"</td>\n" +
+                            "<td>"+data_cp.list[i].component.name+"</td>\n" +
+                            "<td>"+ data_cp.list[i].component.type +"</td>\n" +
+                            "<td>" +data_cp.list[i].num+ "</td>\n" +
+                            "<td>" +data_cp.list[i].secNum+ "</td>\n" +
+                            "<td>"+ data_cp.list[i].component.unit +"</td>\n" +
+                            "<td>"+data_cp.list[i].mark+"</td>\n" +
+                            "</tr>";
+
+                    }
+
+                    $("#storeHouseMess_hidden").html(str);
+                }
+            });
+
             // 改变表单内容
             $("#storeHouseMess").html(result);
             // 改变总条数
@@ -90,6 +117,8 @@ function loadStoreHouse() {
 
     // 下拉框注册点击事件
     $("#selectVal").change(selectChange);
+    // 打印按钮注册打印事件
+    $("#printTable").click(printTable);
 }
 
 /**
@@ -105,7 +134,7 @@ function warehouseResult() {
         url: "pages/archives-warehouse-details-chief-officer.html",
         success: function (data) {
             $("#contain").html(data);
-            loadStoreHouse()
+            loadStoreHouse();
         }
     });
     // 阻止a标签默认事件
@@ -168,7 +197,7 @@ function ajaxData(startPage,begin ,end, pageSize, data) {
     var result = "";
     for (var i = 0; i < data.list.length; i++){
         if(data.list[i].num < data.list[i].secNum){
-            result += "<tr class='dan'>\n" +
+            result += "<tr class='danger'>\n" +
                 "<td>"+(i+1)+"</td>\n" +
                 "<td>"+data.list[i].component.name+"</td>\n" +
                 "<td>"+ data.list[i].component.type +"</td>\n" +
@@ -222,3 +251,23 @@ function selectChange() {
     // 直接请求新界面
     getPage(1,  $("#selectVal").val());
 }
+
+/**
+ * @description: 打印功能
+ * @author: 隋亮亮
+ * @date: 2019-07-31
+ */
+function printTable() {
+    $("#print").print({
+        globalStyles: true,
+        mediaPrint: false,
+        stylesheet: null,
+        noPrintSelector: ".no-print",
+        iframe: true,
+        append: null,
+        prepend: null,
+        manuallyCopyFormValues: true,
+        deferred: $.Deferred()
+    });
+}
+

@@ -31,7 +31,7 @@
                                     itle="导出">
                                 <i class="fa fa-file-o"></i> 导出
                             </button>
-                            <button type="button" class="btn btn-default" t
+                            <button id="printTable" type="button" class="btn btn-default" t
                                     itle="打印">
                                 <i class="fa fa-print"></i> 打印
                             </button>
@@ -63,8 +63,25 @@
 
                     </tr>
                     </thead>
-                    <tbody id="storeHouseMess">
+                    <tbody id="storeHouseMess"></tbody>
                 </table>
+                <div id="print">
+                    <table  id="dataList_hidden"
+                           class="table table-bordered table-striped table-hover dataTable visible-print-block">
+                        <thead>
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">零件名称</th>
+                            <th class="text-center">零件规格型号</th>
+                            <th class="text-center">数量</th>
+                            <th class="text-center">安全库存</th>
+                            <th class="text-center">单位</th>
+                            <th class="text-center">备注</th>
+                        </tr>
+                        </thead>
+                        <tbody id="storeHouseMess_hidden"></tbody>
+                    </table>
+                </div>
                 <!--数据列表/-->
             </div>
             <!-- 数据表格 /-->
