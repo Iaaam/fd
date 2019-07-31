@@ -35,15 +35,28 @@ function loadStoreHouse() {
             $("#fdSpan").html(data.list[0].fdMess.name);
             var result = "";
             for (var i = 0; i < data.list.length; i++){
-                result += "<tr>\n" +
-                    "<td><input name=\"ids\" type=\"checkbox\"></td>\n" +
-                    "<td>"+(i+1)+"</td>\n" +
-                    "<td>"+data.list[i].component.name+"</td>\n" +
-                    "<td>"+ data.list[i].component.type +"</td>\n" +
-                    "<td>" +data.list[i].num+ "</td>\n" +
-                    "<td>"+ data.list[i].component.unit +"</td>\n" +
-                    "<td>"+data.list[i].mark+"</td>\n" +
-                    "</tr>"
+                if(data.list[i].num < data.list[i].secNum){
+                    result += "<tr class='danger'>\n" +
+                        "<td>"+(i+1)+"</td>\n" +
+                        "<td>"+data.list[i].component.name+"</td>\n" +
+                        "<td>"+ data.list[i].component.type +"</td>\n" +
+                        "<td>" +data.list[i].num+ "</td>\n" +
+                        "<td>" +data.list[i].secNum+ "</td>\n" +
+                        "<td>"+ data.list[i].component.unit +"</td>\n" +
+                        "<td>"+data.list[i].mark+"</td>\n" +
+                        "</tr>"
+                }else{
+                    result += "<tr>\n" +
+                        "<td>"+(i+1)+"</td>\n" +
+                        "<td>"+data.list[i].component.name+"</td>\n" +
+                        "<td>"+ data.list[i].component.type +"</td>\n" +
+                        "<td>" +data.list[i].num+ "</td>\n" +
+                        "<td>" +data.list[i].secNum+ "</td>\n" +
+                        "<td>"+ data.list[i].component.unit +"</td>\n" +
+                        "<td>"+data.list[i].mark+"</td>\n" +
+                        "</tr>"
+                }
+
             }
             // 改变表单内容
             $("#storeHouseMess").html(result);
@@ -154,15 +167,28 @@ function ajaxData(startPage,begin ,end, pageSize, data) {
     }
     var result = "";
     for (var i = 0; i < data.list.length; i++){
-        result += "<tr>\n" +
-            "<td><input name=\"ids\" type=\"checkbox\"></td>\n" +
-            "<td>"+(i+1)+"</td>\n" +
-            "<td>"+data.list[i].component.name+"</td>\n" +
-            "<td>"+ data.list[i].component.type +"</td>\n" +
-            "<td>" +data.list[i].num+ "</td>\n" +
-            "<td>"+ data.list[i].component.unit +"</td>\n" +
-            "<td>"+data.list[i].mark+"</td>\n" +
-            "</tr>"
+        if(data.list[i].num < data.list[i].secNum){
+            result += "<tr class='dan'>\n" +
+                "<td>"+(i+1)+"</td>\n" +
+                "<td>"+data.list[i].component.name+"</td>\n" +
+                "<td>"+ data.list[i].component.type +"</td>\n" +
+                "<td>" +data.list[i].num+ "</td>\n" +
+                "<td>" +data.list[i].secNum+ "</td>\n" +
+                "<td>"+ data.list[i].component.unit +"</td>\n" +
+                "<td>"+data.list[i].mark+"</td>\n" +
+                "</tr>"
+        }else{
+            result += "<tr>\n" +
+                "<td>"+(i+1)+"</td>\n" +
+                "<td>"+data.list[i].component.name+"</td>\n" +
+                "<td>"+ data.list[i].component.type +"</td>\n" +
+                "<td>" +data.list[i].num+ "</td>\n" +
+                "<td>" +data.list[i].secNum+ "</td>\n" +
+                "<td>"+ data.list[i].component.unit +"</td>\n" +
+                "<td>"+data.list[i].mark+"</td>\n" +
+                "</tr>"
+        }
+
     }
     // 修改表格内容
     $("#storeHouseMess").html(result);
