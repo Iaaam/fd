@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fd.fd_iterm.mapper.IStoreHouse">
+    <resultMap id="store_house" type="com.fd.fd_iterm.domain.StoreHouse">
+        <id column="storehouse_id" property="nId"></id>
+        <result column="storehouse_no" property="sId"></result>
+        <result column="component_price" property="price"></result>
+        <result column="storehouse_num" property="num"></result>
+        <result column="storehouse_indate" property="inDate"></result>
+        <result column="storehouse_mark" property="mark"></result>
+        <result column="storehouse_security" property="secNum"></result>
+        <association property="component" javaType="com.fd.fd_iterm.domain.Component">
+            <id column="all_id" property="id"></id>
+            <result column="all_no" property="no"></result>
+            <result column="all_name" property="name"></result>
+            <result column="all_type" property="type"></result>
+            <result column="all_kind" property="kind"></result>
+            <result column="all_unit" property="unit"></result>
+        </association>
+        <association property="fdMess" javaType="com.fd.fd_iterm.domain.FdMess">
+            <id column="fd_id" property="id"></id>
+            <result column="fd_no" property="no"></result>
+            <result column="fd_name" property="name"></result>
+            <result column="fd_addr" property="addr"></result>
+            <result column="fd_cdate" property="cDate"></result>
+            <result column="fd_mperson" property="mPerson"></result>
+        </association>
+    </resultMap>
+
+
+    <select id="findAllComp" parameterType="com.fd.fd_iterm.domain.FdMess" resultMap="store_house">
+        SELECT * FROM
+	        storehouse_mess s,
+	        component_mess com,
+	        fd_mess fd
+        WHERE
+	        s.all_id = com.all_id
+	    AND s.fd_id = fd.fd_id
+	    AND fd.fd_id = #{id}
+    </select>
+
+</mapper>
