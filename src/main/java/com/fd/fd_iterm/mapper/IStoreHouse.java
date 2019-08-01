@@ -20,4 +20,11 @@ public interface IStoreHouse {
      * @return
      */
     public List<StoreHouse> findAllComp(FdMess fdMess);
+
+    /**
+     * 查询满足条件的零件
+     * @param house
+     * @return 返回满足条件的零件
+     */
+    public List<StoreHouse> findAllByCond(StoreHouse house);
 }

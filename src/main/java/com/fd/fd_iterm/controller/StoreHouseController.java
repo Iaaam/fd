@@ -1,5 +1,6 @@
 package com.fd.fd_iterm.controller;
 
+import com.fd.fd_iterm.domain.Component;
 import com.fd.fd_iterm.domain.FdMess;
 import com.fd.fd_iterm.domain.StoreHouse;
 import com.fd.fd_iterm.service.IStoreHouseService;
@@ -28,6 +29,13 @@ public class StoreHouseController {
      */
     @RequestMapping("/findAllComp")
     public PageInfo<StoreHouse> findAllComp(Integer startPage, Integer pageSize){
+        if(startPage < 1 || startPage == null){
+            startPage = 1;
+        }
+        if(pageSize < 1 || pageSize == null){
+            pageSize = 8;
+        }
+
         FdMess fdMess = new FdMess();
         fdMess.setId("RsCsv32109296593968");
         // 设置页数
@@ -37,5 +45,42 @@ public class StoreHouseController {
         // 返回page信息
         PageInfo<StoreHouse> info = new PageInfo<StoreHouse>(list);
         return info;
+    }
+
+    /**
+     * 根据条件查询零件
+     * @param startPage
+     * @param pageSize
+     * @param component
+     * @return
+     */
+    @RequestMapping("/findAllByCond")
+    public PageInfo<StoreHouse> findAllByCond(Integer startPage, Integer pageSize, Component component){
+        if(startPage == null || startPage < 1){
+            startPage = 1;
+        }
+        if(pageSize == null || pageSize < 1){
+            pageSize = 8;
+        }
+        FdMess fdMess = new FdMess();
+        fdMess.setId("RsCsv32109296593968");
+        StoreHouse storeHouse = new StoreHouse();
+        storeHouse.setComponent(component);
+        storeHouse.setFdMess(fdMess);
+
+
+        // 开始分页
+        PageHelper.startPage(startPage, pageSize);
+
+        if(component.getNo() == null && component.getName() == null){
+            List<StoreHouse> allComp = service.findAllComp(fdMess);
+            PageInfo<StoreHouse> pageInfo = new PageInfo<StoreHouse>(allComp);
+
+            return pageInfo;
+        }else{
+            List<StoreHouse> allByCond = service.findAllByCond(storeHouse);
+            PageInfo<StoreHouse> pageInfo = new PageInfo<StoreHouse>(allByCond);
+            return  pageInfo;
+        }
     }
 }

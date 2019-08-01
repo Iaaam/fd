@@ -1,3 +1,5 @@
+var stack = [];
+
 $(function () {
     // 请求头部页面
     $.ajax({
@@ -24,7 +26,8 @@ $(function () {
         }
     });
 
-
+    // 将首页入栈
+    stack.push({name: "首页", htmlStr: $("#contain").html()});
 });
 
 /**
@@ -74,6 +77,9 @@ function loadTitle() {
 
             // 仓库类别点击事件
             $("#archives-warehouse-details-chief-officer").click(warehouseResult);
+
+            // 供应商管理注册点击事件
+            $("#archives-supplier-manage").click(supplierResult);
         },
         dataType: "json"
     })

@@ -27,16 +27,30 @@
         </association>
     </resultMap>
 
-
-    <select id="findAllComp" parameterType="com.fd.fd_iterm.domain.FdMess" resultMap="store_house">
-        SELECT * FROM
+    <sql id="selectAll">
+         SELECT * FROM
 	        storehouse_mess s,
 	        component_mess com,
 	        fd_mess fd
         WHERE
 	        s.all_id = com.all_id
 	    AND s.fd_id = fd.fd_id
-	    AND fd.fd_id = #{id}
+    </sql>
+
+    <select id="findAllComp" parameterType="com.fd.fd_iterm.domain.FdMess" resultMap="store_house">
+       <include refid="selectAll"/>
+        AND fd.fd_id = #{id}
+    </select>
+
+    <select id="findAllByCond" parameterType="com.fd.fd_iterm.domain.StoreHouse" resultMap="store_house">
+        <include refid="selectAll"/>
+        <if test="component.no != null">
+            and com.all_no = #{component.no}
+        </if>
+        <if test="component.name != null">
+            and com.all_name = #{component.name}
+        </if>
+        AND fd.fd_id = #{fdMess.id}
     </select>
 
 </mapper>

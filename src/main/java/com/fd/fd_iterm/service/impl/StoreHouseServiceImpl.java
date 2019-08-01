@@ -28,4 +28,15 @@ public class StoreHouseServiceImpl implements IStoreHouseService {
         List<StoreHouse> list = storeHouse.findAllComp(fdMess);
         return list;
     }
+
+    /**
+     * 查询满足条件的零件
+     * @param house
+     * @return
+     */
+    @Override
+    public List<StoreHouse> findAllByCond(StoreHouse house) {
+        List<StoreHouse> allByCond = storeHouse.findAllByCond(house);
+        return allByCond;
+    }
 }

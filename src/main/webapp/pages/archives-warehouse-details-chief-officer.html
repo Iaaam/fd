@@ -5,7 +5,7 @@
         <small>仓库详情</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="javascript:goBack();"><i class="fa fa-dashboard"></i>首页</a></li>
+        <li><a href="javascript:goBack('首页', 'admin-index');"><i class="fa fa-dashboard"></i>首页</a></li>
         <li class="active">仓库详情</li>
     </ol>
 </section>
@@ -35,16 +35,21 @@
                                     itle="打印">
                                 <i class="fa fa-print"></i> 打印
                             </button>
+                            <button id="reFresh" type="button" class="btn btn-default" t
+                                    itle="刷新">
+                                <i class="glyphicon glyphicon-repeat"></i> 刷新
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                        <input type="text" class="form-control input-sm"
-                               placeholder="零件名称、零件编号"> <span
-                            class="glyphicon glyphicon-search form-control-feedback"></span>
+                    <div class="has-feedback" style="position:relative;">
+                        <input id="objVal" type="text" class="form-control input-sm" placeholder="零件名称、零件编号" autocomplete="true">
+                        <span onclick="search()" class="glyphicon glyphicon-search " style="position: absolute; margin-left: 160px;margin-top: 7px;"></span>
                     </div>
                 </div>
+
+
                 <!--工具栏/-->
                 <!--数据列表-->
                 <table id="dataList"
