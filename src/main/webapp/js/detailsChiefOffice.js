@@ -52,7 +52,8 @@ function loadStoreHouse() {
         },
         success: function (data) {
             ajaxContent(data)
-        }
+        },
+        dataType: "json"
     });
 
     // 下拉框注册点击事件
