@@ -5,7 +5,7 @@
 		<small>对供应商进行管理</small>
 	</h1>
 	<ol class="breadcrumb">
-		<li><a href="javascript:goBack('首页', 'admin-index');"><i class="fa fa-dashboard"></i> 首页</a></li>
+		<li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i> 首页</a></li>
 		<li class="active">供应商管理</li>
 	</ol>
 </section>
@@ -20,20 +20,7 @@
 		</div>
 
 		<div class="box-body">
-			<div class="tab-pane" id="tab-select">
-				<div class="row" style="margin-top: 15px;">
-					<div class="pull-left ">
-						<div class="col-md-6 title text-center" style="font-size: 18px;">供应商分类</div>
-						<div class="col-md-6 data">
-							<select class="form-control">
-								<option>默认类</option>
-								<option>工具类</option>
-								<option>零件类</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			<br />
 			<!-- 供应商信息表 -->
 
@@ -77,9 +64,9 @@
 						<th class="text-center">操作</th>
 					</tr>
 					</thead>
-					<tbody>
+					<tbody id="list-data">
 
-					<tr>
+					<!--<tr>
 						<td class="text-center"><input class="icheckbox_square-blue" name="ids" type="checkbox"></td>
 						<td class="text-center">1</td>
 						<td class="text-center">090807153000001</td>
@@ -176,7 +163,7 @@
 							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
 							<button type="button" class="btn bg-olive btn-xs">编辑</button>
 						</td>
-					</tr>
+					</tr>-->
 
 					</tbody>
 				</table>
@@ -219,23 +206,35 @@
 			</div>
 			<!-- .页码-->
 			<div class="box-footer row">
-				<div class="pull-left">
+				<div class=" pull-left">
 					<div class="form-group form-inline">
-						总共1 页，共7 条数据。 每页
-						<select class="form-control">
+						总共&nbsp;<span id="allPage"></span>&nbsp;页，共&nbsp;<span id="allData"></span>&nbsp;条数据。 每页&nbsp;
+						<select class="form-group">
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
 							<option>7</option>
-							<option>10</option>
-							<option>15</option>
-							<option>20</option>
-							<option>50</option>
-							<option>80</option>
-						</select> 条
+							<option selected>8</option>
+						</select>&nbsp;条
 					</div>
 				</div>
 
+				<div class="tab-pane" id="tab-select">
+						<div class="pull-left">
+							<div class="col-md-10 text-center" style="font-size: 14px;">&nbsp;&nbsp;供应商分类:</div>
+							<div class="col-md-2" style="margin-left: -35px">
+								<select >
+									<option selected>默认类</option>
+									<option>工具类</option>
+									<option>零件类</option>
+								</select>
+							</div>
+						</div>
+				</div>
+
 				<div class="box-tools pull-right">
-					<ul class="pagination">
-						<li>
+					<ul id="pages" class="pagination">
+						<!--<li>
 							<a href="#" aria-label="Previous">首页</a>
 						</li>
 						<li><a href="#">上一页</a></li>
@@ -247,7 +246,7 @@
 						<li><a href="#">下一页</a></li>
 						<li>
 							<a href="#" aria-label="Next">尾页</a>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 

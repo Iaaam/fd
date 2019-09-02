@@ -6,6 +6,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class SupplierController {
     private ISupplierService service;
 
     @RequestMapping("findAllSupplier")
-    public PageInfo<Supplier> findAllSupplier(Integer startPage, Integer pageSize){
+    public PageInfo<Supplier> findAllSupplier(@RequestParam(value = "curPage")Integer startPage, @RequestParam(value = "pageSize") Integer pageSize){
         PageHelper.startPage(startPage, pageSize);
         // 数据库中查询
         List<Supplier> list =  service.findAllSupplier();
