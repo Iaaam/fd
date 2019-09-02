@@ -118,5 +118,30 @@ function markActive(id){
     $("#"+id).addClass("active");
 }
 
+/**
+ * @description: 分写工具
+ * @author: 隋亮亮
+ * @date: 2019-09-03
+ * @param curPage 当前页码
+ * @param pages 总页数
+ * @returns {number[]} 返回begin、end
+ */
+function separatePages(curPage, pages) {
+    var begin = 1;
+    var end = 10;
+
+    if(curPage < 6){
+        begin = 1;
+    }else if(curPage > 6 && curPage <= pages - 4){
+        begin = curPage - 5;
+        end = curPage + 4;
+    }else if(curPage > pages-4){
+        begin = pages - 9;
+        end = pages;
+    }
+
+    return [begin, end];
+}
+
 
 

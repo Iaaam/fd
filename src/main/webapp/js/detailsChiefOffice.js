@@ -230,20 +230,9 @@ function getPage(startPage, pageSize, name, no) {
         data: dataObj,
         success: function (data) {
             // 保证前5后4
-            var begin = 1;
-            var end = 10;
-
-            if(startPage < 6){
-                begin = 1;
-            }else if(startPage > 6 && startPage <= data.pages - 4){
-                begin = startPage - 5;
-                end = startPage + 4;
-            }else if(startPage > data.pages-4){
-                begin = data.pages - 9;
-                end = data.pages;
-            }
+            var pageDetail = separatePages(startPage, data.pages);
             // 生成分页条
-            ajaxData(startPage, begin,end, pageSize,data, name, no);
+            ajaxData(startPage, pageDetail[0], pageDetail[1], pageSize,data, name, no);
 
         }
     })
