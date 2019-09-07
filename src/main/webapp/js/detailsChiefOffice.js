@@ -288,60 +288,8 @@ function ajaxData(startPage,begin ,end, pageSize, data,name,no) {
     // 修改总记录数
     $("#totalCount").html(data.total);
 
-    // 拼接首页上一页分页条
-    if(name == undefined && no == undefined){
-        // 拼接分页条
-        result = "<li><a href='javascript:getPage(1,"+pageSize+");' aria-label=\"Previous\">首页</a></li>\n" +
-            "<li><a href='javascript:getPage("+(startPage-1)+","+pageSize+")'>上一页</a></li>"
-    }else if(name != undefined){
-        // 拼接分页条
-        result = "<li><a href='javascript:getPage(1,"+pageSize+","+ "\"" +""+ name +""+"\""+", undefined)' aria-label=\"Previous\">首页</a></li>\n" +
-            "<li><a href='javascript:getPage("+(startPage-1)+","+pageSize+","+ "\"" +""+ name +""+"\""+", undefined)'>上一页</a></li>";
-    }else{
-        // 拼接分页条
-        result = "<li><a href='javascript:getPage(1,"+pageSize+",undefined,"+"\""+""+ no +""+"\""+")' aria-label=\"Previous\">首页</a></li>\n" +
-            "<li><a href='javascript:getPage("+(startPage-1)+","+pageSize+",undefined,"+"\""+""+ no +""+"\""+")'>上一页</a></li>";
-    }
-
-    // 拼接内部分页条
-    for(var i = begin; i <= end; i++){
-        if(name != undefined){
-            // 分页条等于当前页数就做标记
-            if(i == startPage){
-                result += "<li class='active'><a href='javascript:getPage("+i+","+pageSize+","+"\""+""+ name +""+"\""+", undefined)'>"+i+"</a></li>";
-            }else{
-                result += "<li><a href='javascript:getPage("+i+","+pageSize+","+"\""+""+ name +""+"\""+", undefined)'>"+i+"</a></li>";
-            }
-        }else if(no != undefined){
-            // 分页条等于当前页数就做标记
-            if(i == startPage){
-                result += "<li class='active'><a href='javascript:getPage("+i+","+pageSize+",undefined,"+"\""+"" + no + ""+"\""+")'>"+i+"</a></li>";
-            }else{
-                result += "<li><a href='javascript:getPage("+i+","+pageSize+",undefined,"+"\""+"" + no + ""+"\""+")'>"+i+"</a></li>";
-            }
-        }else{
-            // 分页条等于当前页数就做标记
-            if(i == startPage){
-                result += "<li class='active'><a href='javascript:getPage("+i+","+pageSize+")'>"+i+"</a></li>";
-            }else{
-                result += "<li><a href='javascript:getPage("+i+","+pageSize+")'>"+i+"</a></li>";
-            }
-        }
-
-    }
-    // 拼接尾页以及下一页分页条
-    if(name != undefined){
-        result += "<li><a href='javascript:getPage("+(startPage+1)+","+pageSize+","+"\""+"" + name + ""+"\""+", undefined)'>下一页</a></li>\n" +
-            "<li><a href='javascript:getPage("+data.pages+","+pageSize+","+"\""+"" + name + ""+"\""+", undefined)' aria-label=\"Next\">尾页</a></li>";
-    }else if(no != undefined){
-        result += "<li><a href='javascript:getPage("+(startPage+1)+","+pageSize+",undefined,"+"\""+"" + no + ""+"\""+")'>下一页</a></li>\n" +
-            "<li><a href='javascript:getPage("+data.pages+","+pageSize+", undefined,"+"\""+"" + no + ""+"\""+")' aria-label=\"Next\">尾页</a></li>";
-    }else{
-        result += "<li><a href='javascript:getPage("+(startPage+1)+","+pageSize+")'>下一页</a></li>\n" +
-            "<li><a href='javascript:getPage("+(data.pages)+","+pageSize+")' aria-label=\"Next\">尾页</a></li>";
-    }
-
-    $("#pageCount").html(result);
+    // 拼接分页条
+    PagingSet(data, "pageCount", "getPage", startPage, pageSize);
 }
 
 /**

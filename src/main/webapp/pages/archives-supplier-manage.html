@@ -5,7 +5,7 @@
 		<small>对供应商进行管理</small>
 	</h1>
 	<ol class="breadcrumb">
-		<li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i> 首页</a></li>
+		<li><a href="javascript:goBack('首页', 'admin-index');"><i class="fa fa-dashboard"></i> 首页</a></li>
 		<li class="active">供应商管理</li>
 	</ol>
 </section>
@@ -15,26 +15,28 @@
 
 	<div class="box box-primary container-fluid">
 
-		<div class="box-header with-border">
+		<div class="box-header with-border" style="padding: 10px 0px !important;">
 			<h3 class="box-title">供应商信息</h3>
 		</div>
 
-		<div class="box-body">
-
+		<div class="box-body  container-fluid">
 			<br />
-			<!-- 供应商信息表 -->
 
 			<!--工具栏-->
 			<div class="row">
 				<div class="pull-left">
 					<div class="form-group form-inline ">
 						<div class="btn-group">
-							<button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> 新建</button>
-							<button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
-							<button id="refreshSupplier" type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i> 刷新</button>
-							<button type="button" class="btn btn-default" title="导出"><i class="fa fa-file-o"></i> 导出</button>
-							<button type="button" class="btn btn-default" title="启用"><i class="fa fa-refresh"></i> 启用</button>
-							<button type="button" class="btn btn-default" title="禁用"><i class="fa fa-refresh"></i> 禁用</button>
+							<button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> <a href="archives-supplier-info-edit.html" style="color: black;">新建</a></button>
+							<button type="button" class="btn btn-default" title="删除" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-o"></i>
+								删除</button>
+							<button id="refreshSupplier" type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i>
+								刷新</button>
+							<button type="button" class="btn btn-default" title="导出"><i class="fa fa-file-excel-o"></i> 导出</button>
+							<button type="button" class="btn btn-default" title="启用" data-toggle="modal" data-target="#start"><i class="fa fa-refresh"></i>
+								启用</button>
+							<button type="button" class="btn btn-default" title="禁用" data-toggle="modal" data-target="#forbid"><i class="fa fa-refresh"></i>
+								禁用</button>
 						</div>
 					</div>
 				</div>
@@ -46,8 +48,8 @@
 				</div>
 			</div>
 			<!--工具栏/-->
+			<!-- 供应商信息表 -->
 			<div class="table-box row">
-				<!--数据列表-->
 				<table id="dataList" class="table table-bordered table-striped table-hover dataTable">
 					<thead>
 					<tr>
@@ -66,187 +68,212 @@
 					</thead>
 					<tbody id="list-data">
 
-					<!--<tr>
-						<td class="text-center"><input class="icheckbox_square-blue" name="ids" type="checkbox"></td>
-						<td class="text-center">1</td>
-						<td class="text-center">090807153000001</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center"><input class="icheckbox_square-blue" name="ids" type="checkbox"></td>
-						<td class="text-center">2</td>
-						<td class="text-center">090807153000002</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center"><input class="icheckbox_square-blue" name="ids" type="checkbox"></td>
-						<td class="text-center">3</td>
-						<td class="text-center">090807153000003</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center"><input name="ids" type="checkbox"></td>
-						<td class="text-center">4</td>
-						<td class="text-center">090807153000004</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center"><input name="ids" type="checkbox"></td>
-						<td class="text-center">5</td>
-						<td class="text-center">090807153000005</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center"><input name="ids" type="checkbox"></td>
-						<td class="text-center">6</td>
-						<td class="text-center">090807153000001</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center"><input name="ids" type="checkbox"></td>
-						<td class="text-center">7</td>
-						<td class="text-center">090807153000001</td>
-						<td class="text-center">恒泰科技</td>
-						<td class="text-center">林广</td>
-						<td class="text-center">13324789931</td>
-						<td class="text-center">启用</td>
-						<td class="text-center">无</td>
-						<td class="text-center">
-							<button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#myModal">详情</button>
-							<button type="button" class="btn bg-olive btn-xs">编辑</button>
-						</td>
-					</tr>-->
+
 
 					</tbody>
 				</table>
-				<!-- /供应商信息表 -->
-				<div class="tab-pane" id="tab-model">
-
-					<div id="myModal" class="modal modal-primary" role="dialog">
-						<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title">供应商详细信息</h4>
-								</div>
-								<div class="modal-body">
-									<div class="box-body">
-										昌盛文具<br />
-										编号:GYS20170724010<br />
-										分类:默认分类 <br />联系电话: - <br />QQ: -<br />
-										传真: -<br /> 地址: -<br /> 关联客户: -<br />
-										单位电话: -<br /> 邮箱: -<br />备注: - <br />联系人: -<br />
-										邮编: -<br />
-									</div>
-
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-outline" data-dismiss="modal">关闭</button>
-									<button type="button" class="btn btn-outline" data-dismiss="modal">保存</button>
-								</div>
-							</div>
-							<!-- /.modal-content -->
-						</div>
-
-						<!-- /.modal-dialog -->
-					</div>
-					<!-- /.modal -->
-				</div>
-				<!--模态窗口/-->
 
 			</div>
+			<!-- /供应商信息表 -->
+			<!-- 删除，启用，禁用弹框 -->
+			<!-- 删除 -->
+			<div class="tab-pane" id="tab-model" style="display: inline">
+				<div id="delete" class="modal modal-primary" role="dialog">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">确认删除</h4>
+							</div>
+							<div class="modal-body">
+
+								<div class="box-body" style="text-align: center">
+
+									<div style="font-size: 18px;margin-bottom: 40px">确定删除？</div>
+									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-right: 20px">确定
+									</button>
+									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-left: 20px">取消
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /删除 -->
+			<!-- 启用 -->
+			<div class="tab-pane" id="tab-model" style="display: inline">
+				<div id="start" class="modal modal-primary" role="dialog">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">确认启用</h4>
+							</div>
+							<div class="modal-body">
+
+								<div class="box-body" style="text-align: center">
+
+									<div style="font-size: 18px;margin-bottom: 40px">确定启用？</div>
+									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-right: 20px">确定
+									</button>
+									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-left: 20px">取消
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /启用 -->
+			<!-- 禁用 -->
+			<div class="tab-pane" id="tab-model" style="display: inline">
+				<div id="forbid" class="modal modal-primary" role="dialog">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">确认禁用</h4>
+							</div>
+							<div class="modal-body">
+
+								<div class="box-body" style="text-align: center">
+
+									<div style="font-size: 18px;margin-bottom: 40px">确定禁用？</div>
+									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-right: 20px">确定
+									</button>
+									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-left: 20px">取消
+									</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /禁用 -->
+			<!-- /删除，启用，禁用弹框 -->
+			<!-- 供应商详情 -->
+			<div class="tab-pane" id="tab-model">
+
+				<div id="detail" class="modal modal-primary" role="dialog">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">供应商详细信息</h4>
+							</div>
+							<div class="modal-body">
+								<div class="box-body" style="font-size: 18px;margin-left: 50px;">
+									<div class="form-horizontal">
+										<div class="form-group">
+											<label for="" class="col-sm-2 control-label">名称:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="名称" value="昌盛文具" disabled="disabled">
+											</div>
+											<label for="" class="col-sm-2 control-label">编号:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="编号" value="GYS20170724010" disabled="disabled">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="" class="col-sm-2 control-label">分类:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="分类" value="默认类" disabled="disabled">
+											</div>
+											<label for="" class="col-sm-2 control-label">电话:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="电话" value="13324576835" disabled="disabled">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="" class="col-sm-2 control-label">地址:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="地址" value="窊流路66号" disabled="disabled">
+											</div>
+											<label for="" class="col-sm-2 control-label">传真:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="传真" value="13537246839" disabled="disabled">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="" class="col-sm-2 control-label">邮箱:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="邮箱" value="12345@qq.com" disabled="disabled">
+											</div>
+											<label for="" class="col-sm-2 control-label">状态:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="状态" value="启用" disabled="disabled">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="" class="col-sm-2 control-label">QQ:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="QQ" value="1798884302" disabled="disabled">
+											</div>
+											<label for="" class="col-sm-2 control-label">邮编:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="邮编" value="30000" disabled="disabled">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="" class="col-sm-2 control-label">联系人:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="联系人" value="李" disabled="disabled">
+											</div>
+											<label for="" class="col-sm-2 control-label">备注:</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" placeholder="备注" value="" disabled="disabled">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--供应商详情/-->
 			<!-- .页码-->
 			<div class="box-footer row">
-				<div class=" pull-left">
-					<div class="form-group form-inline">
-						总共&nbsp;<span id="allPage"></span>&nbsp;页，共&nbsp;<span id="allData"></span>&nbsp;条数据。 每页&nbsp;
-						<select class="form-group">
+				<div class="col-md-8">
+					<div class="form-group form-inline" style="margin-top: 15px;">
+						总共<span id="allPage"></span>页，共<span id="allData"></span>条数据。 每页
+						<select class="form-control">
 							<option>4</option>
 							<option>5</option>
 							<option>6</option>
 							<option>7</option>
-							<option selected>8</option>
-						</select>&nbsp;条
+							<option>8</option>
+						</select> 条&nbsp;&nbsp;
+						<div class=" title" style="font-size: 14px;padding: 5px 0px;margin-right: 0px;display: inline-block;">供应商分类:</div>
+						&nbsp;&nbsp;
+						<div class=" data" style="display: inline-block;" >
+							<select class="form-control">
+								<option>默认类</option>
+								<option>工具类</option>
+								<option>零件类</option>
+							</select>
+						</div>
 					</div>
 				</div>
+				<div class="col-md-8">
+					<!-- 供应商分类 -->
+					<div class="" style="margin-top: 15px;">
 
-				<div class="tab-pane" id="tab-select">
-						<div class="pull-left">
-							<div class="col-md-10 text-center" style="font-size: 14px;">&nbsp;&nbsp;供应商分类:</div>
-							<div class="col-md-2" style="margin-left: -35px">
-								<select >
-									<option selected>默认类</option>
-									<option>工具类</option>
-									<option>零件类</option>
-								</select>
-							</div>
-						</div>
+					</div>
+					<!-- /供应商分类 -->
 				</div>
-
 				<div class="box-tools pull-right">
 					<ul id="pages" class="pagination">
-						<!--<li>
-							<a href="#" aria-label="Previous">首页</a>
-						</li>
-						<li><a href="#">上一页</a></li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">下一页</a></li>
-						<li>
-							<a href="#" aria-label="Next">尾页</a>
-						</li>-->
+
 					</ul>
 				</div>
 
