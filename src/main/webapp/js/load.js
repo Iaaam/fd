@@ -119,7 +119,7 @@ function markActive(id){
 }
 
 /**
- * @description: 分写工具
+ * @description: 分页工具
  * @author: 隋亮亮
  * @date: 2019-09-03
  * @param curPage 当前页码
@@ -143,5 +143,71 @@ function separatePages(curPage, pages) {
     return [begin, end];
 }
 
+/**
+ * @description: 分页条拼接处理工具
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ * @param data 界面请求回的数据
+ * @param id 拼接到tbody中的id
+ * @param resultFunc 分页条点击的处理函数
+ * @param curPage 当前页
+ * @param pageSize 每页显示的数量
+ */
+function PagingSet(data, id, resultFunc, curPage, pageSize) {
+    // 分页工具类
+    var pageDetail = separatePages(curPage, data.pages);
 
+    // 进行拼接
+    var str = "<li>\n" +
+        "<a href='javascript:"+resultFunc+"(1, 8);' aria-label=\"Previous\">首页</a>\n" +
+        "</li>";
+
+    // 拼接判断（越界判断）
+    if(curPage > 1){
+        str += "<li><a href='javascript:"+resultFunc+"("+ (curPage - 1) +", 8);'>上一页</a></li>";
+    }else{
+        str += "<li><a href='javascript:"+resultFunc+"(1, 8);'>上一页</a></li>";
+    }
+
+    for(var i = pageDetail[0]; i <= pageDetail[1]; i++){
+        // 判断标记激活状态
+        if(curPage === i){
+            str += "<li class='active'><a href='javascript:"+resultFunc+"("+ i +", 8);'>"+ i +"</a></li>";
+        }else{
+            str += "<li><a href='javascript:"+resultFunc+"("+ i +", 8);'>"+ i +"</a></li>";
+        }
+    }
+
+    // 越界判断（下一页判断）
+    if(curPage < data.pages){
+        str += "<li><a href='javascript:"+resultFunc+"("+ (curPage + 1) +", 8);'>下一页</a></li>\n";
+    }else{
+        str += "<li><a href='javascript:"+resultFunc+"("+ data.pages +", 8);'>下一页</a></li>\n";
+    }
+
+    str += "<li><a href='javascript:"+resultFunc+"("+ data.pages +", 8);' aria-label='Next'>尾页</a></li>";
+
+    // 装入界面
+    $("#"+id+"").html(str);
+}
+
+/**
+ * @description: 返回选中的checkbox中的隐藏域id
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ * @returns {null|Array} 返回空或者id数组
+ */
+function returnAllChecked() {
+    var objs = $("tbody>tr>td>input:checked").siblings();
+    // 没有选中则结束掉处理
+    if(objs.length === 0){
+        return null;
+    }
+    var idArray = [];
+    // 获取input中的value属性值
+    for (var i = 0; i < objs.length; i++) {
+        idArray[i] = $(objs[i]).attr("value");
+    }
+    return idArray;
+}
 

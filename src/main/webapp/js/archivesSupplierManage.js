@@ -15,8 +15,16 @@ function supplierResult() {
             // 服务器请求，动态加载数据
             loadData(1, 8);
 
+            // 完善界面上的功能
+            winTool();
+
             // 刷新按钮功能
             $("#refreshSupplier").click(reFreshSupplier);
+
+            // 删除按钮功能
+            $("#confirmDelete").click(deleteSupplier);
+
+
         }
     });
 
@@ -55,7 +63,7 @@ function addList(data, curPage, pageSize) {
     var str = "";
     for(var i = 0; i < data.list.length; i++){
         str += "<tr>\n" +
-            "<td class=\"text-center\"><input class=\"icheckbox_square-blue\" name=\"ids\" type=\"checkbox\"></td>\n" +
+            "<td class=\"text-center\"><input type='hidden' value='"+data.list[i].id+"'><input class='icheckbox_square-blue' name=\"ids\" type=\"checkbox\"></td>\n" +
             "<td class=\"text-center\">"+ (i + 1)+"</td>\n" +
             "<td class=\"text-center\">"+ data.list[i].no+"</td>\n" +
             "<td class=\"text-center\">"+data.list[i].name+"</td>\n" +
@@ -77,13 +85,13 @@ function addList(data, curPage, pageSize) {
         }
 
         str += "<td class=\"text-center\">\n" +
-            "<button type=\"button\" class=\"btn bg-olive btn-xs\" data-toggle=\"modal\" data-target=\"#myModal\">详情</button>\n" +
-            "<button type=\"button\" class=\"btn bg-olive btn-xs\">编辑</button>\n" +
-            "</td>\n" +
-            "</tr>";
+            "<button type=\"button\" class=\"btn bg-olive btn-xs\" data-toggle=\"modal\" data-target=\"#detail\">详情</button>\n" +
+            "<button type=\"button\" class=\"btn bg-olive btn-xs target\"><a href=\"archives-supplier-info-edit.html\" style=\"color: white;\">\n" +
+            "编辑</a></button>\n" +
+            "</td>";
 
         // 调用分页条拼接与处理函数
-        PagingSet(data, curPage, pageSize);
+        PagingSet(data, "pages", "loadData", curPage, pageSize);
         
         // 信息列表的拼接
         $("#list-data").html(str);
@@ -98,56 +106,62 @@ function addList(data, curPage, pageSize) {
 }
 
 /**
- * @description: 分页条的拼接与处理
- * @author: 隋亮亮
- * @date: 2019-09-03
- * @param data 服务器请求到的数据
- * @param curPage 当前页
- * @param pageSize 每页显示的数量
- */
-function PagingSet(data, curPage, pageSize) {
-    // 分页工具类
-    var pageDetail = separatePages(curPage, data.pages);
-
-    // 进行拼接
-    var str = "<li>\n" +
-        "<a href='javascript:loadData(1, 8);' aria-label=\"Previous\">首页</a>\n" +
-        "</li>";
-
-    // 拼接判断（越界判断）
-    if(curPage > 1){
-        str += "<li><a href='javascript:loadData("+ (curPage - 1) +", 8);'>上一页</a></li>";
-    }else{
-        str += "<li><a href='javascript:loadData(1, 8);'>上一页</a></li>";
-    }
-
-    for(var i = pageDetail[0]; i <= pageDetail[1]; i++){
-        // 判断标记激活状态
-        if(curPage === i){
-            str += "<li class='active'><a href='javascript:loadData("+ i +", 8);'>"+ i +"</a></li>";
-        }else{
-            str += "<li><a href='javascript:loadData("+ i +", 8);'>"+ i +"</a></li>";
-        }
-    }
-
-    // 越界判断（下一页判断）
-    if(curPage < data.pages){
-        str += "<li><a href='javascript:loadData("+ (curPage + 1) +", 8);'>下一页</a></li>\n";
-    }else{
-        str += "<li><a href='javascript:loadData("+ data.pages +", 8);'>下一页</a></li>\n";
-    }
-
-    str += "<li><a href='javascript:loadData("+ data.pages +", 8);' aria-label='Next'>尾页</a></li>";
-
-    // 装入界面
-    $("#pages").html(str);
-}
-
-/**
  * @description: 刷新按钮功能
  * @author: 隋亮亮
  * @date: 2017-08-01
  */
 function reFreshSupplier() {
     supplierResult();
+}
+
+/**
+ * @description: 界面自带的工具（复选框全选）
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ */
+function winTool() {
+    // 列表按钮
+    $("#dataList td input[type='checkbox']").iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        increaseArea: '20%'
+    });
+    // 全选操作
+    $("#selall").click(function() {
+        var clicks = $(this).is(':checked');
+        if (!clicks) {
+            $("#dataList td input[type='checkbox']").iCheck("uncheck");
+        } else {
+            $("#dataList td input[type='checkbox']").iCheck("check");
+        }
+        $(this).data("clicks", !clicks);
+    });
+}
+
+/**
+ * @description: 删除处理事件
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ */
+function deleteSupplier() {
+    // 接收返回来的id数组
+    var array = returnAllChecked();
+
+    // 空id判断
+    if(array === null){
+        return;
+    }
+
+    // 进行请求
+    $.ajax({
+        url: "supplier/deleteSupplier",
+        data: {
+            deleteData: JSON.stringify(array)
+        },
+        type: "post",
+        success: function (data) {
+            // 删除完重新刷新部分界面
+            loadData(1, 8);
+        },
+        dataType: "text"
+    })
 }
