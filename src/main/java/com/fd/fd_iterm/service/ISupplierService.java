@@ -15,4 +15,7 @@ public interface ISupplierService {
      * @return 全部供应商
      */
     List<Supplier> findAllSupplier();
+
+    void deleteById(String id);
 }
+

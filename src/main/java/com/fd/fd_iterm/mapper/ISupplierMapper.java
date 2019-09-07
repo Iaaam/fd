@@ -17,4 +17,6 @@ public interface ISupplierMapper {
      * @return 全部供货商
      */
     public List<Supplier> findAllSupplier();
+
+    public void deleteById(String id);
 }

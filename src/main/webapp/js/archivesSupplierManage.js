@@ -15,11 +15,16 @@ function supplierResult() {
             // 服务器请求，动态加载数据
             loadData(1, 8);
 
+            // 完善界面上的功能
+            winTool();
+
             // 刷新按钮功能
             $("#refreshSupplier").click(reFreshSupplier);
 
-            // 完善界面上的功能
-            winTool();
+            // 删除按钮功能
+            $("#confirmDelete").click(deleteSupplier);
+
+
         }
     });
 
@@ -58,7 +63,7 @@ function addList(data, curPage, pageSize) {
     var str = "";
     for(var i = 0; i < data.list.length; i++){
         str += "<tr>\n" +
-            "<td class=\"text-center\"><input class='icheckbox_square-blue' name=\"ids\" type=\"checkbox\"></td>\n" +
+            "<td class=\"text-center\"><input type='hidden' value='"+data.list[i].id+"'><input class='icheckbox_square-blue' name=\"ids\" type=\"checkbox\"></td>\n" +
             "<td class=\"text-center\">"+ (i + 1)+"</td>\n" +
             "<td class=\"text-center\">"+ data.list[i].no+"</td>\n" +
             "<td class=\"text-center\">"+data.list[i].name+"</td>\n" +
@@ -101,16 +106,6 @@ function addList(data, curPage, pageSize) {
 }
 
 /**
- * @description: 分页条的拼接与处理
- * @author: 隋亮亮
- * @date: 2019-09-03
- * @param data 服务器请求到的数据
- * @param curPage 当前页
- * @param pageSize 每页显示的数量
- */
-
-
-/**
  * @description: 刷新按钮功能
  * @author: 隋亮亮
  * @date: 2017-08-01
@@ -119,6 +114,11 @@ function reFreshSupplier() {
     supplierResult();
 }
 
+/**
+ * @description: 界面自带的工具（复选框全选）
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ */
 function winTool() {
     // 列表按钮
     $("#dataList td input[type='checkbox']").iCheck({
@@ -135,4 +135,33 @@ function winTool() {
         }
         $(this).data("clicks", !clicks);
     });
+}
+
+/**
+ * @description: 删除处理事件
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ */
+function deleteSupplier() {
+    // 接收返回来的id数组
+    var array = returnAllChecked();
+
+    // 空id判断
+    if(array === null){
+        return;
+    }
+
+    // 进行请求
+    $.ajax({
+        url: "supplier/deleteSupplier",
+        data: {
+            deleteData: JSON.stringify(array)
+        },
+        type: "post",
+        success: function (data) {
+            // 删除完重新刷新部分界面
+            loadData(1, 8);
+        },
+        dataType: "text"
+    })
 }

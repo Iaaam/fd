@@ -119,7 +119,7 @@ function markActive(id){
 }
 
 /**
- * @description: 分写工具
+ * @description: 分页工具
  * @author: 隋亮亮
  * @date: 2019-09-03
  * @param curPage 当前页码
@@ -191,5 +191,23 @@ function PagingSet(data, id, resultFunc, curPage, pageSize) {
     $("#"+id+"").html(str);
 }
 
-
+/**
+ * @description: 返回选中的checkbox中的隐藏域id
+ * @author: 隋亮亮
+ * @date: 2019-09-07
+ * @returns {null|Array} 返回空或者id数组
+ */
+function returnAllChecked() {
+    var objs = $("tbody>tr>td>input:checked").siblings();
+    // 没有选中则结束掉处理
+    if(objs.length === 0){
+        return null;
+    }
+    var idArray = [];
+    // 获取input中的value属性值
+    for (var i = 0; i < objs.length; i++) {
+        idArray[i] = $(objs[i]).attr("value");
+    }
+    return idArray;
+}
 

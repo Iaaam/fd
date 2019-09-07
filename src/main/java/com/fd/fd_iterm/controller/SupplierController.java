@@ -1,5 +1,8 @@
 package com.fd.fd_iterm.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fd.fd_iterm.domain.SipplierRet;
 import com.fd.fd_iterm.domain.Supplier;
 import com.fd.fd_iterm.service.ISupplierService;
 import com.github.pagehelper.PageHelper;
@@ -30,5 +33,28 @@ public class SupplierController {
         PageInfo<Supplier> pageInfo = new PageInfo<Supplier>(list);
         // 返回分页
         return pageInfo;
+    }
+
+    @RequestMapping("deleteSupplier")
+    public String deleteSupplier(SipplierRet supplierRet){
+
+        // 得到所有需要删除的id
+        for (int i = 0; i < supplierRet.getDeleteData().length; i++) {
+            // 对id字符串进行处理
+            String temp = supplierRet.getDeleteData()[i].replaceAll("\"", "");
+            temp = temp.replaceAll("\\[", "").replaceAll("\\]", "");
+            // 分次调用service接口
+            service.deleteById(temp);
+        }
+        // 设置状态码并且返回
+        supplierRet.setStatus("success");
+        ObjectMapper mapper = new ObjectMapper();
+        String ret = null;
+        try {
+            ret = mapper.writeValueAsString(supplierRet);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return ret;
     }
 }

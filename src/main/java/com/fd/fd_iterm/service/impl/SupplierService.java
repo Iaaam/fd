@@ -28,4 +28,9 @@ public class SupplierService implements ISupplierService {
         List<Supplier> allSupplier = mapper.findAllSupplier();
         return allSupplier;
     }
+
+    @Override
+    public void deleteById(String id) {
+        mapper.deleteById(id);
+    }
 }

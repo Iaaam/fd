@@ -28,7 +28,7 @@
 					<div class="form-group form-inline ">
 						<div class="btn-group">
 							<button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> <a href="archives-supplier-info-edit.html" style="color: black;">新建</a></button>
-							<button type="button" class="btn btn-default" title="删除" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-o"></i>
+							<button id="deleteBtn" type="button" class="btn btn-default" title="删除" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-o"></i>
 								删除</button>
 							<button id="refreshSupplier" type="button" class="btn btn-default" title="刷新"><i class="fa fa-refresh"></i>
 								刷新</button>
@@ -91,7 +91,7 @@
 								<div class="box-body" style="text-align: center">
 
 									<div style="font-size: 18px;margin-bottom: 40px">确定删除？</div>
-									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-right: 20px">确定
+									<button id="confirmDelete" type="button" class="btn btn-outline" data-dismiss="modal" style="margin-right: 20px">确定
 									</button>
 									<button type="button" class="btn btn-outline" data-dismiss="modal" style="margin-left: 20px">取消
 									</button>
